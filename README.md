@@ -6,7 +6,7 @@ https://arxiv.org/abs/1608.00263
 
 The directory cz_v2 contains an improved rearrangement of the circuits in that paper. These are circuits for qubits in a 2D lattice, using controlled-phase (CZ) gates. The differences with the ones in the previous reference are:
 
-1.- The cycles of two qubit gates (see Fig. 6) have been reordered. Cycles now alternate between horizontal and diagonal gates. 
+1.- The cycles of two qubit gates (see Fig. 6) have been reordered. Cycles now alternate between horizontal and vertical gates. 
 
 2.- Every CZ gate is followed by a non-diagonal single qubit gate if possible, to avoid the pattern CZ - T - CZ (see https://arxiv.org/abs/1804.04797). 
 
