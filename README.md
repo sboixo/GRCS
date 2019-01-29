@@ -4,7 +4,11 @@ Random quantum circuits for circuit sampling with superconducting qubits.
 See:
 https://arxiv.org/abs/1608.00263
 
-The directory cz_v2 contains an improved rearrangement of the circuits in that paper. These are circuits for qubits in a 2D lattice, using controlled-phase (CZ) gates. The differences with the ones in the previous reference are:
+Directory inst/rectangular contains circuits in a rectangular lattice. Each tar file nxm.tar.gz contains circuits for qubits in an n times m lattice. The files inside are named nxm_maxcycle_id.txt where maxcycle is the index of the last clock cycle in the circuit, and id is a number identifying the particular instance. The first cycle of Hadamards is cycle 0. 
+
+Directory inst/bristlecone contains circuits in the Bristlecone lattice (see https://ai.googleblog.com/2018/03/a-preview-of-bristlecone-googles-new.html). Each tar file bris_n.tar.gz contains circuits using n rows. The files inside are named bris_n_maxcycle_id.txt (see above). 
+
+The directory cz_v2 contains an improved rearrangement of the circuits in the arxiv paper above. These are circuits for qubits in a 2D lattice, using controlled-phase (CZ) gates. The differences with the ones in the previous reference are:
 
 1.- The cycles of two qubit gates (see Fig. 6) have been reordered. Cycles now alternate between horizontal and vertical gates. 
 
@@ -14,7 +18,7 @@ The directory cz_v2 contains an improved rearrangement of the circuits in that p
 
 4.- We include a layer of Hadamards explicitly before measurement in the computational basis. 
 
-The directory is_v2 contains the same circuits, except that CZ gates are replaced by ISWAP gates. This gate is harder to simulate classically with distributed implementations. 
+The directory is_v1 contains the same circuits, except that CZ gates are replaced by ISWAP gates. This gate is harder to simulate classically with distributed implementations. 
 
 In each directory, each tar file nxm.tar.gz contains circuits for qubits in an n times m lattice. The files inside are named nxm_maxcycle_id.txt where maxcycle is the index of the last clock cycle in the circuit, and id is a number identifying the particular instance. The first cycle of Hadamards is cycle 0. 
 
